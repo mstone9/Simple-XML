@@ -6,3 +6,11 @@ This repository is used to teach future developers on how to use Simple XML.
 - Use Simple XML to parse a basic XML file.
 - Use Simple XML to parse a nesting XML file.
 - Use Simple XML to parse an array expressed as an XML file.
+
+```XML
+<dependency>
+    <groupId>org.simpleframework</groupId>
+    <artifactId>simple-xml</artifactId>
+    <version>2.7.1</version>
+</dependency>
+```
