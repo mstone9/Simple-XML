@@ -17,5 +17,5 @@ Maven is a software tool used for Java project management and build automation. 
     <version>2.7.1</version>
 </dependency>
 ```
-## Parsing a Basic XML File with Simple XML
-    In order to parse data from any file, you need a Persister.  See the [Persister] (http://simple.sourceforge.net/download/stream/doc/javadoc/org/simpleframework/xml/core/Persister.html) class.
+## Parsing a Basic XML File with Simple XML:
+   In order to parse data from any file, you need a Persister.  See the [Persister] (http://simple.sourceforge.net/download/stream/doc/javadoc/org/simpleframework/xml/core/Persister.html) class.
