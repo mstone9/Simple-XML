@@ -24,7 +24,7 @@ Maven is a software tool used for Java project management and build automation. 
    
    The Main method reads in the information via an xml file stored in the repository, and not through a URL.  The Main method uses the Serializer class to read the information stored within the XML file, and stores the information in a new Credentials object.  
    
-   ```
+   ```Java
    Serializer serializer = new Persister();
    File source = new File("woz.xml");
    Credentials credentials = serializer.read(Credentials.class, source);
