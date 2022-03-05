@@ -2,7 +2,6 @@ package edu.missouriwestern.csc346;
 
 import org.simpleframework.xml.*;
 import org.simpleframework.xml.core.Persister;
-
 import java.io.File;
 
 /**

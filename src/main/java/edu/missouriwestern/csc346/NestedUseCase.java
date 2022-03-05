@@ -2,7 +2,6 @@ package edu.missouriwestern.csc346;
 import org.simpleframework.xml.*;
 import org.simpleframework.xml.Serializer;
 import org.simpleframework.xml.core.Persister;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -75,14 +74,14 @@ class Weather{
     public String toString(){
         return "Weather{" +
                 "version=" + version +
-                ", credit='" + credit + '\'' +
-                ", credit_URL='" + credit_URL + '\'' +
+                ", credit='" + credit + '\n' +
+                ", credit_URL='" + credit_URL + '\n' +
                 ", image=" + image +
-                ", location='" + location + '\'' +
-                ", station_id='" + station_id + '\'' +
-                ", observation_time='" + observation_time + '\'' +
-                ", observation_time_rfc822='" + observation_time_rfc822 + '\'' +
-                ", weather='" + weather + '\'' +
+                ", location='" + location + '\n' +
+                ", station_id='" + station_id + '\n' +
+                ", observation_time='" + observation_time + '\n' +
+                ", observation_time_rfc822='" + observation_time_rfc822 + '\n' +
+                ", weather='" + weather + '\n' +
                 ", temp_f=" + temp_f +
                 ", temp_c=" + temp_c +
                 '}';
