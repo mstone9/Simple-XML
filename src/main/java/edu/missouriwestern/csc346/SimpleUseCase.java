@@ -5,10 +5,9 @@ import org.simpleframework.xml.core.Persister;
 import java.io.File;
 
 /**
+ *
  * @Authors Marshall Stone, Cooper Jones, Gabriel Adams, Josh Mesmer
  * @Since February 2022
- *
- *
  */
 
 public class SimpleUseCase {
@@ -16,10 +15,7 @@ public class SimpleUseCase {
         Serializer serializer = new Persister();
         File source = new File("woz.xml");
         Credentials credentials = serializer.read(Credentials.class, source);
-        System.out.println(credentials.getHost());
-        System.out.println(credentials.getPort());
-        System.out.println(credentials.getUser());
-        System.out.println(credentials.getPassword());
+        System.out.println(credentials.toString());
     }
 }
 
@@ -56,6 +52,11 @@ class Credentials{
     }
     public String getPassword(){
         return password.getXhint();
+    }
+
+    @Override
+    public String toString(){
+        return String.format("%s\n%s\n%s\n%s\n",host,port,user,password.getXhint());
     }
 }
 

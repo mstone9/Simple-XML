@@ -21,7 +21,6 @@ public class NestedUseCase {
             Weather weather = serializer.read(Weather.class, in);
             in.close();
 
-
             System.out.println(weather.toString());
         }catch(Exception e){
             System.out.println("Exception: " + e.getMessage());
@@ -37,22 +36,31 @@ class Weather{
 
     @Element
     private String credit;
+
     @Element
     private String credit_URL;
+
     @Element
     private Image image;
+
     @Element
     private String location;
+
     @Element
     private String station_id;
+
     @Element
     private String observation_time;
+
     @Element
     private String observation_time_rfc822;
+
     @Element
     private String weather;
+
     @Element
     private double temp_f;
+
     @Element
     private double temp_c;
 
@@ -72,19 +80,8 @@ class Weather{
 
     @Override
     public String toString(){
-        return "Weather{" +
-                "version=" + version +
-                ", credit='" + credit + '\n' +
-                ", credit_URL='" + credit_URL + '\n' +
-                ", image=" + image +
-                ", location='" + location + '\n' +
-                ", station_id='" + station_id + '\n' +
-                ", observation_time='" + observation_time + '\n' +
-                ", observation_time_rfc822='" + observation_time_rfc822 + '\n' +
-                ", weather='" + weather + '\n' +
-                ", temp_f=" + temp_f +
-                ", temp_c=" + temp_c +
-                '}';
+        return String.format("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n",version,credit,credit_URL,image.getUrl(),image.getTitle(),image.getLink(),
+                location,station_id,observation_time,observation_time_rfc822,weather,temp_f,temp_c);
     }
 }
 
