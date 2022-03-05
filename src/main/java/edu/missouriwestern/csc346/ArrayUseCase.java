@@ -3,6 +3,8 @@ package edu.missouriwestern.csc346;
 import org.simpleframework.xml.*;
 import org.simpleframework.xml.core.Persister;
 import java.io.File;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -29,7 +31,7 @@ public class ArrayUseCase{
 @Root
 class States{
     @ElementList(inline = true)
-    private List<State> states;
+    private ArrayList<State> states;
 
     public Object[] getStates(){return states.toArray();}
 }
@@ -77,26 +79,9 @@ class State{
 
     @Override
     public String toString() {
-        return "State{" +
-                "state='" + state + '\'' +
-                ", slug='" + slug + '\'' +
-                ", code='" + code + '\'' +
-                ", nickname='" + nickname + '\'' +
-                ", website='" + website + '\'' +
-                ", admission_date='" + admission_date + '\'' +
-                ", admission_number=" + admission_number +
-                ", capital_city='" + capital_city + '\'' +
-                ", capital_url='" + capital_url + '\'' +
-                ", population=" + population +
-                ", population_rank=" + population_rank +
-                ", constitution_url='" + constitution_url + '\'' +
-                ", state_flag_url='" + state_flag_url + '\'' +
-                ", state_seal_url='" + state_seal_url + '\'' +
-                ", map_image_url='" + map_image_url + '\'' +
-                ", landscape_background_url='" + landscape_background_url + '\'' +
-                ", skyline_background_url='" + skyline_background_url + '\'' +
-                ", twitter_url='" + twitter_url + '\'' +
-                ", facebook_url='" + facebook_url + '\'' +
-                '}';
+        return String.format("%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n%s\n\n",
+                state,slug,code,nickname,website,admission_date,admission_number,capital_city,capital_url,population,
+                population_rank,constitution_url,state_flag_url,state_seal_url,map_image_url,landscape_background_url,
+                skyline_background_url,twitter_url,facebook_url);
     }
 }
